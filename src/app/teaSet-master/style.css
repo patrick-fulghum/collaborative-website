@@ -1,0 +1,108 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 70vw;
+  height: 80vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-rows: 1fr 1fr 1fr;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+
+}
+
+#result {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  /*padding: 10px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+.icon {
+  background-repeat: no-repeat;
+   background-position: center center;
+  background-size: contain;
+  width: 33%;
+   height: 60%;
+}
+
+.green_cup {
+   background-image: url('./assets/good/green_cup.png');
+
+}
+.green_kettle {
+   background-image: url('./assets/good/green_kettle.png');
+   background-size: 130%;
+}
+.green_spoon {
+   background-image: url('./assets/good/green_spoon.png');
+}
+
+.purple_cup {
+  background-image: url('./assets/good/purple_cup.png');
+}
+.purple_kettle {
+  background-image: url('./assets/good/purple_kettle.png');
+  background-size: 130%;
+}
+.purple_spoon {
+  background-image: url('./assets/good/purple_spoon.png');
+}
+
+.red_cup {
+  background-image: url('./assets/good/red_cup.png');
+}
+.red_kettle {
+   background-image: url('./assets/good/red_kettle.png');
+   background-size: 130%;
+}
+.red_spoon {
+   background-image: url('./assets/good/red_spoon.png');
+}
+.card:hover {
+  filter: brightness(65%);
+}
+
+#total {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1000px) {
+  .wrapper {
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: 25% 25% 25% 25%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
